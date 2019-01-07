@@ -1,0 +1,56 @@
+public static ArrayList<goodsBean> goodsList(int PageStart, int PageEnd) {// 获取所有商品
+		
+		ArrayList<goodsBean> list = new ArrayList<goodsBean>();
+		
+		goodsBean gb = new goodsBean();
+		
+		int count = 0;
+		
+		String sql = "select gnumber,gname,gstatus,creator,gsum,price,gift from goods";
+		
+		baseDAO db = new baseDAO();
+		
+		db.getConnection();
+		
+		db.createStatement();
+		
+		ResultSet rs = db.executeQuery(sql);
+		
+		try {
+		
+			while(rs.next()) {
+			
+				if(count > PageStart) continue;
+				
+				if(count < PageEnd) break;
+				
+				gb.setgNumber(rs.getString(1));
+				
+				gb.setgName(rs.getString(2));
+				
+				gb.setgStatus(rs.getInt(3));
+				
+				gb.setCreator(rs.getString(4));
+				
+				gb.setgSum(rs.getInt(5));
+				
+				gb.setPrice(rs.getInt(6));
+				
+				gb.setGift(rs.getBoolean(7));
+				
+				list.add(gb);
+			}
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+	
+		} finally {
+
+			db.close();
+	
+		}
+		
+		return list;
+
+	}
