@@ -98,3 +98,12 @@ the dessertation
 # 注意2：仓库公开随意克隆，推送需要身为仓库团队成员
 `git clone <远程仓库地址>`  
 `git clone https://github.com/daxiayang23/server_api.git`  
+
+# 多人协同开发
+# 开发代码 > 工作区 > 暂存区 > 提交 > 拉取（可选） > 推送  
+# 拉取 ( > 推送 ）  
+# 看到别人同步的最新内容
+`git pull origin master` 
+等同于
+`git fetch origin master:master` （获取远程分支记录到本地，未合并）
+`git merge origin/master` （把远程分支记录合并到所在分支下）
