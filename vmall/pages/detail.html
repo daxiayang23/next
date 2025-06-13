@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+        }
+        a:hover {
+            color: red;
+        }
+        ul, li {
+            list-style: none;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            height: 124px;
+            box-sizing: border-box;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #dededd;
+        }
+        li {
+            width: 60px;
+            font-size: 12px;
+        }
+        .banner {
+            width: 980px;
+            margin: 0 auto;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            background: url("../media/banner.jpg") no-repeat;
+            background-size: cover;
+        }
+        .banner .left {
+            height: 100%;
+            width: 50%;
+            line-height: 120px;
+        }
+        .banner .left > span:first-child {
+            font-size: 40px;
+            font-weight: bold;
+            color: #de7c2f;
+        }
+        .banner .left > span:last-child {
+            color:gray;
+        }
+        .banner .right {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .banner .right ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .banner .right ul li {
+            width: auto;
+            text-align: center;
+            cursor: pointer;
+        }
+        .banner .right ul li:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        .banner .right ul li:nth-child(7),
+        .banner .right ul li:nth-child(8) {
+            display: none;
+        }
+        .nav {
+            width: 980px;
+            height: 36px;
+            margin: 0 auto;
+            background: linear-gradient(#f7ca8a, #de7c2f);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .main {
+            width: 980px;
+            height: 643px;
+            margin: 5px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cate, .content, .sidebar {
+            flex: 1;
+            height: 100%;
+        }
+        .content {
+            flex: 3;
+            margin: 0 10px;
+            border: 1px solid #dededd;
+            position: relative;
+            border-radius: 6px;
+        }
+        .cate {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .cate-head {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            box-sizing: border-box;
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(#f9bb75, #f47f22);
+            line-height: 15px;
+        }
+        h2 {
+            background-color: #efefef;
+            border: 1px #dededd solid;
+            font-size: 14px;
+            color: #ff7300;
+            box-sizing: border-box;
+            padding: 2px 0 2px 5px;
+        }
+        .specific-product-item img {
+            width: 80px;
+            height: 80px;
+        }
+        .s1, .s2 {
+            width: 100%;
+            height: 135px;
+            border: 1px solid #dededd;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .s2 {
+            height: 305px;
+            margin: 5px 0 0 0;
+        }
+        .s1-content h5 {
+            text-align: center;
+        }
+        .s1-content p {
+            box-sizing: border-box;
+            padding: 0 10px 10px 10px;
+            font-size: 12px;
+            transform: scale(0.9);
+        }
+        .s2-content {
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .s2-content div{
+            height: 30px;
+            line-height: 30px;
+        }
+        .s3 {
+            margin: 5px 0 0 0;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 5px;
+            border-left: 2px solid #dededd;
+            border-right: 2px solid #dededd;
+            border-bottom: 2px solid #dededd;
+        }
+        .s3 .tab-bar {
+            width: 100%;
+            height: 30px;
+            position: relative;
+            border-top: 2px solid #dededd;
+            background: linear-gradient(#fad990, #f6eec6);
+            cursor: pointer;
+        }
+        .s3 .tab-bar > div {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 30px;
+            bottom: 0;
+        }
+        .s3 .tab-bar > div:nth-child(2) {
+            margin: 0 0 0 60px;
+        }
+        .tab-bar-act {
+            height: 30px;
+            border-top: 2px solid #dfa60a;
+            border-right: 2px solid #dfa60a;
+            border-left: 2px solid #dfa60a;
+            border-bottom: none;
+            background: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .laptop, .charge-fee {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .laptop form,
+        .charge-fee form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .charge-fee {
+            display: none;
+        }
+        .footer {
+            width: 100%;
+            height: 150px;
+        }
+        .f1 {
+            width: 980px;
+            height: 100%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .nav-bar {
+            background: transparent;
+        }
+        .nav-bar > li {
+            width: 80px;
+            text-align: center;
+            background: transparent;
+            line-height: 25px;
+            cursor: pointer;
+        }
+        .nav-bar > li:hover {
+            color: white;
+        }
+        .search-bar {
+            top: 5px;
+            right: 10px;
+        }
+        .content-product-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content-product-detail .product-detail-img {
+            width: 260px;
+            height: 260px;
+            margin: 10px 0 10px 0;
+        }
+        .product-detail-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .product-detail-description > div:first-child {
+            box-sizing: border-box;
+            padding: 0 30px;
+        }
+        .product-detail-description > div:first-child > p{
+            font-size: 12px;
+            text-indent: 2em;
+            margin:10px 0;
+        }
+        .product-sales {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 30px;
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .product-sales > div:first-child {
+            font-size: 12px;
+            color: grey;
+        }
+        .product-sales > div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .product-sales > div:last-child > div:first-child {
+            width: 150px;
+        }
+        .product-sales > div:last-child > div:last-child {
+            display: flex;
+            width: 200px;
+        }
+        .product-sales > div:last-child > div:last-child button {
+            background: white;
+            border: 2px solid #ff7300;
+            border-radius: 10px;
+            color: #ff7300;
+            height: 40px;
+            width: 160px;
+            padding: 0 15px;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+        .product-sales > div:last-child > div:last-child button:last-child {
+            width: 80px;
+            color: white;
+            background: #ff7300;
+        }
+        .product-sales > div:last-child span:first-child {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff7300;
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+    <div class="left">
+        <span>又贵又美商城</span> <span>expansive and beautiful</span>
+    </div>
+    <div class="right">
+        <div>
+            <ul>
+                <li>购物车</li>
+                <li>帮助中心</li>
+                <li>加入收藏</li>
+                <li>设为首页</li>
+                <li class="login-button">
+                    <a href="../pages/login.html">登录</a>
+                </li>
+                <li class="register-button">
+                    <a href="../pages/register.html">注册</a>
+                </li>
+                <li class="username-button"></li>
+                <li class="logout-button">退出</li>
+            </ul>
+        </div>
+        <div style="color: white">你好，欢迎访问贵美商城！125年6月13日15点26分</div>
+    </div>
+</div>
+<div class="nav">
+    <ul class="nav-bar">
+        <li>
+            <a href="../index.html">首页</a>
+        </li>
+        <li>家用电器</li>
+        <li>手机数码</li>
+        <li>日用百货</li>
+        <li>书籍</li>
+        <li>帮助中心</li>
+        <li>免费开店</li>
+        <li>全球咨询</li>
+    </ul>
+    <div class="search-bar" style="position: absolute;">
+        <form>
+            <label>
+                <input type="text" placeholder="请输入搜索内容" />
+            </label>
+            <button type="submit">搜索</button>
+        </form>
+    </div>
+</div>
+<div class="main">
+    <div class="cate">
+        <div class="cate-head">
+            <div>商品分类</div>
+            <div>全部分类</div>
+        </div>
+        <h2>家用电器</h2>
+        <ul>
+            <li><a href="#">大家电</a></li>
+            <li><a href="#">洗衣机</a></li>
+            <li><a href="#">平板</a></li>
+            <li><a href="#">电热水器</a></li>
+            <li><a href="#">家庭音响</a></li>
+            <li><a href="#">热水器</a></li>
+            <li><a href="#">空调冰箱</a></li>
+            <li><a href="#">冷柜</a></li>
+            <li><a href="#">DVD</a></li>
+            <li><a href="#">电视附件</a></li>
+            <li><a href="#">电燃气</a></li>
+            <li><a href="#">家电下乡</a></li>
+            <li><a href="#">家电服务</a></li>
+            <li><a href="#">电饭煲</a></li>
+            <li><a href="#">高压锅</a></li>
+        </ul>
+        <h2>书籍</h2>
+        <ul>
+            <li><a href="#">大家电</a></li>
+            <li><a href="#">洗衣机</a></li>
+            <li><a href="#">平板</a></li>
+            <li><a href="#">电热水器</a></li>
+            <li><a href="#">家庭音响</a></li>
+            <li><a href="#">热水器</a></li>
+            <li><a href="#">空调冰箱</a></li>
+            <li><a href="#">冷柜</a></li>
+            <li><a href="#">DVD</a></li>
+            <li><a href="#">电视附件</a></li>
+            <li><a href="#">电燃气</a></li>
+            <li><a href="#">家电下乡</a></li>
+            <li><a href="#">家电服务</a></li>
+            <li><a href="#">电饭煲</a></li>
+            <li><a href="#">高压锅</a></li>
+        </ul>
+        <h2>手机数码</h2>
+        <ul>
+            <li><a href="#">大家电</a></li>
+            <li><a href="#">洗衣机</a></li>
+            <li><a href="#">平板</a></li>
+            <li><a href="#">电热水器</a></li>
+            <li><a href="#">家庭音响</a></li>
+            <li><a href="#">热水器</a></li>
+            <li><a href="#">空调冰箱</a></li>
+            <li><a href="#">冷柜</a></li>
+            <li><a href="#">DVD</a></li>
+            <li><a href="#">电视附件</a></li>
+            <li><a href="#">电燃气</a></li>
+            <li><a href="#">家电下乡</a></li>
+            <li><a href="#">家电服务</a></li>
+            <li><a href="#">电饭煲</a></li>
+            <li><a href="#">高压锅</a></li>
+        </ul>
+        <h2>日用百货</h2>
+        <ul>
+            <li><a href="#">大家电</a></li>
+            <li><a href="#">洗衣机</a></li>
+            <li><a href="#">平板</a></li>
+            <li><a href="#">电热水器</a></li>
+            <li><a href="#">家庭音响</a></li>
+            <li><a href="#">热水器</a></li>
+            <li><a href="#">空调冰箱</a></li>
+            <li><a href="#">冷柜</a></li>
+            <li><a href="#">DVD</a></li>
+            <li><a href="#">电视附件</a></li>
+            <li><a href="#">电燃气</a></li>
+            <li><a href="#">家电下乡</a></li>
+            <li><a href="#">家电服务</a></li>
+            <li><a href="#">电饭煲</a></li>
+            <li><a href="#">高压锅</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="cate-head">
+            <div>商品详情</div>
+        </div>
+        <div class="content-product-detail"></div>
+    </div>
+    <div class="sidebar">
+        <div class="s1">
+            <div class="cate-head">
+                <div>公告栏</div>
+                <div>全部分类</div>
+            </div>
+            <div class="s1-content">
+                <h5>【夏日焕新，限时钜惠！】</h5>
+                <p>
+                    这个夏天，为你带来全新惊喜！精选爆款商品直降50%，全场满399立减100，会员更享专属福利！
+                </p>
+            </div>
+        </div>
+        <div class="s2">
+            <div class="cate-head">
+                <div>最新新闻</div>
+                <div>全部分类</div>
+            </div>
+            <div class="s2-content">
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+                <div>
+                    <a href="#">立即点击下单，畅享清凉盛夏！</a>
+                </div>
+            </div>
+        </div>
+        <div class="s3">
+            <div class="tab-bar">
+                <div class="tab-bar-act">笔记本</div>
+                <div>手机充值</div>
+            </div>
+            <div class="laptop">
+                <form>
+                    <label>
+                        品牌：
+                        <select>
+                            <option>请选择</option>
+                            <option>联想</option>
+                            <option>戴尔</option>
+                            <option>华硕</option>
+                        </select>
+                    </label>
+                    <label>
+                        尺寸：
+                        <select>
+                            <option>请选择</option>
+                            <option>14英寸</option>
+                            <option>16英寸</option>
+                            <option>18英寸</option>
+                        </select>
+                    </label>
+                    <label>
+                        价格：
+                        <select>
+                            <option>请选择</option>
+                            <option>4000以下</option>
+                            <option>4000-8000</option>
+                            <option>8000以上</option>
+                        </select>
+                    </label>
+                    <input type="submit" value="查看折扣价" />
+                </form>
+            </div>
+            <div class="charge-fee">
+                <form>
+                    <label>
+                        运营商：
+                        <select>
+                            <option>请选择</option>
+                            <option>中国移动</option>
+                            <option>中国联通尔</option>
+                            <option>中国电信</option>
+                        </select>
+                    </label>
+                    <label>
+                        地区：
+                        <select>
+                            <option>请选择</option>
+                            <option>北京</option>
+                            <option>上海</option>
+                            <option>深圳</option>
+                        </select>
+                    </label>
+                    <label>
+                        面值：
+                        <select>
+                            <option>请选择</option>
+                            <option>50元</option>
+                            <option>100元</option>
+                            <option>150元</option>
+                        </select>
+                    </label>
+                    <input type="submit" value="查看折扣价" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="f1">
+        <p>友情链接：  百度 | 谷歌 | 淘宝 | 京东 | 拼多多 | 唯品会 | 天猫 | 腾讯 | 新浪 | 网易 | 搜狐 | 虎扑 | 凤凰网</p>
+        <hr />
+        <p>
+            COPYRIGHT © 2025 版权所有 ALL RIGHT RESERVED <br />
+            热线：000-00000000 Email:test@qq.com<br />
+        </p>
+    </div>
+</div>
+<script src="../js/detail.js" type="module"></script>
+</body>
+</html>

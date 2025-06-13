@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+        }
+        a:hover {
+            color: red;
+        }
+        ul, li {
+            list-style: none;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            height: 124px;
+            box-sizing: border-box;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #dededd;
+        }
+        li {
+            width: 60px;
+            font-size: 12px;
+        }
+        .banner {
+            width: 980px;
+            margin: 0 auto;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            background: url("../media/banner.jpg") no-repeat;
+            background-size: cover;
+        }
+        .banner .left {
+            height: 100%;
+            width: 50%;
+            line-height: 120px;
+        }
+        .banner .left > span:first-child {
+            font-size: 40px;
+            font-weight: bold;
+            color: #de7c2f;
+        }
+        .banner .left > span:last-child {
+            color:gray;
+        }
+        .banner .right {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .banner .right ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .banner .right ul li {
+            width: auto;
+            text-align: center;
+            cursor: pointer;
+        }
+        .banner .right ul li:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        .banner .right ul li:nth-child(7),
+        .banner .right ul li:nth-child(8) {
+            display: none;
+        }
+        .nav {
+            width: 980px;
+            height: 36px;
+            margin: 0 auto;
+            background: linear-gradient(#f7ca8a, #de7c2f);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .main {
+            width: 980px;
+            height: 643px;
+            margin: 5px auto;
+            border: 1px solid #dededd;
+        }
+        h2 {
+            background-color: #efefef;
+            border: 1px #dededd solid;
+            font-size: 14px;
+            color: #ff7300;
+            box-sizing: border-box;
+            padding: 2px 0 2px 5px;
+        }
+        .footer {
+            width: 100%;
+            height: 150px;
+        }
+        .f1 {
+            width: 980px;
+            height: 100%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .nav-bar {
+            background: transparent;
+        }
+        .nav-bar > li {
+            width: 80px;
+            text-align: center;
+            background: transparent;
+            line-height: 25px;
+            cursor: pointer;
+        }
+        .nav-bar > li:hover {
+            color: white;
+        }
+        .search-bar {
+            top: 5px;
+            right: 10px;
+        }
+        .caption {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            box-sizing: border-box;
+            padding: 0 0 0 20px;
+            background: #ff7300;
+            font-size: 24px;
+        }
+        .form-area {
+            width: 100%;
+            height: calc(100% - 60px);
+            background: linear-gradient(#f7ca8a, white);
+            display: flex;
+            justify-content: center;
+        }
+        .form-area > form {
+            margin: 20px 0 0 0;
+        }
+        .form-area > form table {
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-area > form table tr {
+            height: 50px;
+        }
+        .form-area > form table tr td:first-child {
+            width: 100px;
+            text-align: right;
+        }
+        .form-area > form table tr td span {
+            font-size: 12px;
+            color: grey;
+        }
+        .login-button, .register-button {
+            background: #ff7300;
+            width: 80px;
+            height: 34px;
+            color: white;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+    <div class="left">
+        <span>又贵又美商城</span> <span>expansive and beautiful</span>
+    </div>
+    <div class="right">
+        <div>
+            <ul>
+                <li>购物车</li>
+                <li>帮助中心</li>
+                <li>加入收藏</li>
+                <li>设为首页</li>
+                <li>
+                    <a href="../pages/login.html">登录</a>
+                </li>
+                <li>注册</li>
+                <li></li>
+                <li>退出</li>
+            </ul>
+        </div>
+        <div style="color: white">你好，欢迎访问贵美商城！125年6月13日15点26分</div>
+    </div>
+</div>
+<div class="nav">
+    <ul class="nav-bar">
+        <li>
+            <a href="../index.html">首页</a>
+        </li>
+        <li>家用电器</li>
+        <li>手机数码</li>
+        <li>日用百货</li>
+        <li>书籍</li>
+        <li>帮助中心</li>
+        <li>免费开店</li>
+        <li>全球咨询</li>
+    </ul>
+    <div class="search-bar" style="position: absolute;">
+        <form>
+            <label>
+                <input type="text" placeholder="请输入搜索内容" />
+            </label>
+            <button type="submit">搜索</button>
+        </form>
+    </div>
+</div>
+<div class="main">
+    <div class="caption">注册</div>
+    <div class="form-area">
+        <form>
+            <table class="register-form">
+                <tr>
+                    <td>
+                        <label for="username">用户名：</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="请输入用户名" id="username" />
+                        <span>用户名不能以数字开头</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="passwd">密码：</label>
+                    </td>
+                    <td>
+                        <input type="password" placeholder="请输入密码" id="passwd" />
+                        <span>密码不能为空</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="check">确认密码：</label>
+                    </td>
+                    <td>
+                        <input type="password" placeholder="请确认密码" id="check" />
+                        <span>请再次输入密码</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">邮箱：</label>
+                    </td>
+                    <td>
+                        <input type="email" placeholder="请输入邮箱" id="email" />
+                        <span>邮箱必须符合格式</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        性别：
+                    </td>
+                    <td>
+                        <label>
+                            男<input name="gender" type="radio" value="male"/>
+                        </label>
+                        <label>
+                            女<input name="gender" type="radio" value="female"/>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        爱好：
+                    </td>
+                    <td>
+                        <label>
+                            唱歌<input type="checkbox" value="sing"/>
+                        </label>
+                        <label>
+                            跳舞<input type="checkbox" value="dance"/>
+                        </label>
+                        <label>
+                            画画<input type="checkbox" value="paint"/>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="addr">地址：</label>
+                    </td>
+                    <td>
+                        <textarea cols="30" rows="5" id="addr"></textarea>
+                        <span>请输入正确的邮寄地址</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input class="register-button" type="submit" value="注册" />
+                        <input class="login-button" type="reset" value="重置" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="footer">
+    <div class="f1">
+        <p>友情链接：  百度 | 谷歌 | 淘宝 | 京东 | 拼多多 | 唯品会 | 天猫 | 腾讯 | 新浪 | 网易 | 搜狐 | 虎扑 | 凤凰网</p>
+        <hr />
+        <p>
+            COPYRIGHT © 2025 版权所有 ALL RIGHT RESERVED <br />
+            热线：000-00000000 Email:test@qq.com<br />
+        </p>
+    </div>
+</div>
+</body>
+</html>
