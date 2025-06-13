@@ -1,0 +1,296 @@
+{
+  "id": "4947386",
+  "name": "tiktok",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7834345",
+      "name": "plus",
+      "font_class": "plus",
+      "unicode": "e8fe",
+      "unicode_decimal": 59646
+    },
+    {
+      "icon_id": "1381468",
+      "name": "star",
+      "font_class": "star1",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "7239512",
+      "name": "message",
+      "font_class": "message2",
+      "unicode": "e6fe",
+      "unicode_decimal": 59134
+    },
+    {
+      "icon_id": "4114089",
+      "name": "help",
+      "font_class": "help",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "6192647",
+      "name": "settings",
+      "font_class": "settings",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "39489044",
+      "name": "Menu",
+      "font_class": "Menu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "321570",
+      "name": "fullscreen",
+      "font_class": "fullscreen",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "4766907",
+      "name": "sound",
+      "font_class": "sound",
+      "unicode": "e7da",
+      "unicode_decimal": 59354
+    },
+    {
+      "icon_id": "10330627",
+      "name": "full-screen",
+      "font_class": "full-screen",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "14464851",
+      "name": "listen-later",
+      "font_class": "listen-later",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "34453019",
+      "name": "mute",
+      "font_class": "mute",
+      "unicode": "e83d",
+      "unicode_decimal": 59453
+    },
+    {
+      "icon_id": "544907",
+      "name": "play",
+      "font_class": "play",
+      "unicode": "e8c2",
+      "unicode_decimal": 59586
+    },
+    {
+      "icon_id": "5428477",
+      "name": "pause",
+      "font_class": "pause",
+      "unicode": "e6fd",
+      "unicode_decimal": 59133
+    },
+    {
+      "icon_id": "5755912",
+      "name": "emoji",
+      "font_class": "emoji",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "23129875",
+      "name": "弹幕开启",
+      "font_class": "danmukaiqi",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "23129876",
+      "name": "弹幕关闭",
+      "font_class": "danmuguanbi",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "800879",
+      "name": "love",
+      "font_class": "love",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "5119350",
+      "name": "star",
+      "font_class": "star",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "6794467",
+      "name": "threedots",
+      "font_class": "threedots",
+      "unicode": "e6ea",
+      "unicode_decimal": 59114
+    },
+    {
+      "icon_id": "6806859",
+      "name": "Play",
+      "font_class": "Play",
+      "unicode": "eb78",
+      "unicode_decimal": 60280
+    },
+    {
+      "icon_id": "9207697",
+      "name": "love",
+      "font_class": "aixin-xian",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "10678426",
+      "name": "message",
+      "font_class": "message1",
+      "unicode": "e6df",
+      "unicode_decimal": 59103
+    },
+    {
+      "icon_id": "22756941",
+      "name": "share",
+      "font_class": "share",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "314519",
+      "name": "group",
+      "font_class": "weibiaoti102",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "528653",
+      "name": "followed",
+      "font_class": "followed",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "7141570",
+      "name": "tv",
+      "font_class": "tv",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "16619138",
+      "name": "movie",
+      "font_class": "movie",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "20158565",
+      "name": "vlog",
+      "font_class": "vlog",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "24492816",
+      "name": "Profile",
+      "font_class": "Profile",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "33467628",
+      "name": "ai",
+      "font_class": "ai",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "43849920",
+      "name": "star-05",
+      "font_class": "star-05",
+      "unicode": "e6bf",
+      "unicode_decimal": 59071
+    },
+    {
+      "icon_id": "58331",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "88056",
+      "name": "good2",
+      "font_class": "good2",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "372149",
+      "name": "cc-diamond",
+      "font_class": "cc-diamond",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "1224913",
+      "name": "download",
+      "font_class": "download",
+      "unicode": "e6a5",
+      "unicode_decimal": 59045
+    },
+    {
+      "icon_id": "4765866",
+      "name": "message",
+      "font_class": "message",
+      "unicode": "e78a",
+      "unicode_decimal": 59274
+    },
+    {
+      "icon_id": "6609130",
+      "name": "post",
+      "font_class": "post",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "9053046",
+      "name": "magic-line",
+      "font_class": "magic-line",
+      "unicode": "e6d6",
+      "unicode_decimal": 59094
+    },
+    {
+      "icon_id": "15838506",
+      "name": "notification",
+      "font_class": "notification",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "34064566",
+      "name": "抖音",
+      "font_class": "douyin",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "42577552",
+      "name": "抖音-copy",
+      "font_class": "douyin1",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    }
+  ]
+}

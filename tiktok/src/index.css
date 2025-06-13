@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #161823;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+}
+.app .app-sidebar {
+    width: 180px;
+    height: 100%;
+}
+.app .app-container {
+    width: calc(100% - 180px);
+    height: 100%;
+}
+.app .app-container .video-controller-up-and-down{
+    width: 100%;
+    height: calc(100% - 55px);
+    overflow: hidden;
+    position: relative;
+}
+.app .app-container .video-controller-up-and-down .main-stage {
+    position: absolute;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.2s ease-in-out;
+}
+@media (max-width: 1240px) {
+    .app .app-sidebar {
+        width: 72px;
+        background: #990055;
+    }
+    .app .app-container {
+        width: calc(100% - 72px);
+        height: 100%;
+        background: green;
+    }
+}

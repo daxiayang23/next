@@ -1,0 +1,18 @@
+.switch {
+    width: 24px;
+    height: 14px;
+    background: #d1d1d1;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    box-sizing: border-box;
+}
+.switch .ball {
+    background: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    transform: translateX(0);
+    transition: transform .2s ease, background-color .2s ease;
+}

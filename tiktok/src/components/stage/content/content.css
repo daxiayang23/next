@@ -1,0 +1,83 @@
+.content {
+    width: 100%;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.content .play-video {
+    width: 100%;
+    height: 100%;
+    background: yellowgreen;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: url("src/assets/data/1.png") center center no-repeat;
+    box-sizing: border-box;
+    background-size: cover;
+    overflow: hidden;
+}
+.content .play-video .video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+    box-sizing: border-box;
+}
+.content .user-operator {
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    width: 52px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+.content .user-operator .user-operator-item {
+    text-align: center;
+    cursor: pointer;
+}
+.content .user-operator .user-operator-item .user-operator-item-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.content .user-operator .user-operator-item span:first-child {
+    font-size: 26px;
+}
+.content .vlog-detail {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.content .vlog-detail > div {
+    width: 100%;
+    display: flex;
+}
+.content .user-operator .user-operator-item:first-child {
+    position: relative;
+}
+.content .user-operator .user-operator-item:first-child > div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 10px;
+    background: red;
+    color: white;
+    bottom: 0;
+    left: 10px;
+}
+.content .user-operator .user-operator-item:first-child > div span {
+    font-size: 12px;
+}

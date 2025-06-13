@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+        }
+        ul, li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .head {
+            width: 100%;
+            height: 800px;
+            background-color: red;
+            position: relative;
+        }
+        .head .banner {
+            width: 100%;
+            height: 80px;
+            background-color: #f9c4bb;
+        }
+        .head .banner .banner-content-container {
+            width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .head .banner .banner-content-container .logo{
+            width: 200px;
+            height: 100%;
+            text-align: center;
+            line-height: 80px;
+            font-size: 32px;
+        }
+        .head .banner .banner-content-container .menu{
+            width: 600px;
+            display: flex;
+            justify-content: space-around;
+            line-height: 80px;
+        }
+        .head .banner .banner-content-container .menu .menu-item {
+            position: relative;
+            box-sizing: border-box;
+            padding: 0 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .head .banner .banner-content-container .menu .menu-item:hover {
+            background-color: white;
+        }
+        .head .banner .banner-content-container .menu .menu-item .sub-menu {
+            display: none;
+            position: absolute;
+            left: -12px;
+        }
+        .head .banner .banner-content-container .menu .menu-item .sub-menu .sub-menu-item {
+            height: 30px;
+            width: 80px;
+            line-height: 30px;
+            background-color: black;
+            color: white;
+        }
+        .head .banner .banner-content-container .menu .menu-item .sub-menu .sub-menu-item:hover {
+            background-color: white;
+            color: black;
+        }
+        .head .middle-bottom-block {
+            width: 1100px;
+            height: 120px;
+            background-color: black;
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            margin-left: -550px;
+            box-shadow: -1px -1px 0 1px white;
+        }
+        .product-area {
+            width: 100%;
+            height: 1000px;
+            background-color: white;
+        }
+        .product-area .product-area-container {
+            width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .product-area .product-area-container .product-navigation {
+            width: 100%;
+            height: 50px;
+            margin: 200px 0 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .product-font-class {
+            width: 240px;
+            height: 100px;
+        }
+        .product-font-class > div:first-child {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        .product-font-class > div:first-child > div:first-child {
+            font-size: 46px;
+            font-family: "Microsoft YaHei UI", sans-serif;
+            line-height: 40px;
+        }
+        .product-font-class > div:first-child > div:last-child {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        .product-font-class .line {
+            height: 3px;
+            width: 28px;
+            margin: 10px 0;
+            background-color: black;
+        }
+        .product-font-class > div:last-child {
+            font-size: 20px;
+            line-height: 20px;
+            margin: 0 0 0 10px;
+        }
+        .product-area .product-area-container .product-navigation .product-navigation-menu {
+            display: flex;
+        }
+        .product-area .product-area-container .product-navigation .product-navigation-menu li {
+            width: 25px;
+            text-align: center;
+            padding: 10px 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .product-area .product-area-container .product-navigation .product-navigation-menu li:nth-child(2n-1) {
+            width: 65px;
+        }
+        .product-area .product-area-container .product-navigation .product-navigation-menu li:nth-child(2n-1):hover {
+            color: #e4cf88;
+            border-bottom: 2px #e4cf88 solid;
+        }
+        .product-area .product-area-container .product-show-area {
+            margin: 50px 0 0 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .product-area .product-area-container .product-show-area .left,
+        .product-area .product-area-container .product-show-area .middle,
+        .product-area .product-area-container .product-show-area .right {
+            flex: 1;
+        }
+        .product-area .product-area-container .product-show-area .middle,
+        .product-area .product-area-container .product-show-area .right {
+            margin: 0 0 0 5px;
+        }
+        .product-area .product-area-container .product-show-area .left{
+            display: flex;
+            flex-direction: column;
+            height: 550px;
+        }
+        .product-area .product-area-container .product-show-area .right {
+            height: 470px;
+            background-color: #696969;
+        }
+        .product-area .product-area-container .product-show-area .middle {
+            height: 500px;
+        }
+        .product-area .product-area-container .product-show-area .left > div:first-child {
+            flex: 2;
+            background-color: #848484;
+        }
+        .product-area .product-area-container .product-show-area .middle > div:first-child {
+            height: 300px;
+            background-color: #808080;
+        }
+        .product-area .product-area-container .product-show-area .left > div:last-child {
+            flex: 1;
+            background-color: #868686;
+            margin: 5px 0 0 0;
+        }
+        .product-area .product-area-container .product-show-area .middle > div:last-child {
+            height: 150px;
+            background-color: #696969;
+            margin: 5px 0 0 0;
+        }
+        .more {
+            width: 120px !important;
+            height: 35px !important;
+            border-radius: 20px;
+            background-color: white;
+            border: 1px solid #696969;
+            box-sizing: border-box;
+            padding: 0 5px;
+            line-height: 35px;
+            display: flex;
+            justify-content: center;
+            margin: 100px auto;
+            align-items: center;
+        }
+        .more img {
+            width: 20px !important;
+            height: 20px !important;
+            transform: scaleX(1.2);
+            margin-left: 5px;
+        }
+        .color-bulk-container {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            background-color: #fcbc22;
+        }
+        .color-bulk-container .up-color-bulk {
+            width: 400px;
+            height: 300px;
+            background-color: #c2d1f3;
+            border: 1px solid black;
+            position: absolute;
+            left: 20%;
+            top: -100px;
+        }
+        .color-bulk-container .down-color-bulk {
+            width: 1100px;
+            height: 200px;
+            position: absolute;
+            bottom: -85px;
+            background-color: #243329;
+            left: 50%;
+            margin-left: -550px;
+        }
+        .grid1 {
+            margin: 200px 0 0 0;
+            width: 100%;
+            height: 900px;
+        }
+        .grid1 .row1 {
+            width: 1100px;
+            height: 267px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+        .grid1 .row1 .case {
+            flex: 2;
+        }
+        .grid1 .row1 > div{
+            flex: 1;
+        }
+        .grid1 .row1 > div:nth-child(2) {
+            height: 267px;
+            background-color: #036d05;
+        }
+        .grid1 .row1 > div:nth-child(3) {
+            height: 267px;
+            background-color: #fcbc22;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        .grid1 .row1 > div:nth-child(3) p{
+            width: 200px;
+            font-size: 12px;
+            line-height: 26px;
+            text-align: center;
+        }
+        .grid1 .row1 > div:nth-child(3) > div {
+            width: 30px;
+            height: 1px;
+            background-color: black;
+            margin: 10px 0 20px 0;
+        }
+        .grid1 .cross-line {
+            width: 100%;
+            height: 2px;
+            background-color: #e3e3e3;
+        }
+        .grid1 .other-rows {
+            margin: 0 auto;
+            width: 1100px;
+            height: 534px;
+        }
+        .grid1 .other-rows .row2 {
+            width: 100%;
+            height: 267px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .grid1 .other-rows .row3 {
+            width: 100%;
+            height: 267px;
+            background-color: pink;
+        }
+        .grid1 .other-rows .row2 > div {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid1 .other-rows .row2 > div:nth-child(2) {
+            background-color: #fdf7f2;
+        }
+        .grid1 .other-rows .row2 > div:nth-child(2) p {
+            width: 200px;
+            font-size: 12px;
+            line-height: 26px;
+        }
+        .grid1 .other-rows .row2 > div:nth-child(2) > div:nth-child(2) {
+            width: 30px;
+            height: 1px;
+            background-color: black;
+            margin: 10px 0 20px 0;
+        }
+        .grid1 .other-rows .row2 > div:first-child {
+            flex: 2;
+            height: 100%;
+            background-color: #036d05;
+        }
+        .grid1 .other-rows .row2 > div:last-child {
+            background-color: #036d05;
+        }
+        .grid1 .other-rows .row3 {
+            width: 100%;
+            height: 267px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .grid1 .other-rows .row3 > div {
+            flex: 1;
+            height: 267px;
+            box-sizing: border-box;
+            background-color: #fdf7f2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid1 .other-rows .row3 > div > div {
+            width: 30px;
+            height: 1px;
+            background-color: black;
+            margin: 10px 0 20px 0;
+        }
+        .grid1 .other-rows .row3 > div p {
+            text-align: center;
+            font-size: 12px;
+            line-height: 26px;
+            width: 200px;
+        }
+        .grid1 .other-rows .row3 > div:nth-child(2) {
+            background-color: #fcbc22;
+        }
+        .grid1 .other-rows .row3 > div:nth-child(3) {
+            background-color: #036d05;
+        }
+        .grid1 .row1 .case .product-font-class > div:first-child > div:first-child {
+            margin-left: -110px;
+        }
+        .grid1 .row1 .case .product-font-class > div:first-child .dot {
+            margin-left: -210px;
+        }
+        .team {
+            margin-top: 120px;
+            width: 100%;
+            height: 500px;
+        }
+        .team > div:first-child {
+            margin: 0 auto;
+            width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .team > div:first-child .product-font-class > div:first-child > div:first-child {
+            margin-left: -110px;
+        }
+        .team > div:first-child .product-font-class > div:first-child .dot {
+            margin-left: -200px;
+        }
+        .team > div:first-child > div:last-child {
+            width: 50px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            text-align: center;
+            line-height: 15px;
+            font-size: 12px;
+            color: gray;
+        }
+        .team > div:nth-child(2) {
+            margin-top: 30px;
+            width: 100%;
+            height: 2px;
+            background-color: #e3e3e3;
+        }
+        .team > div:last-child {
+            width: 1100px;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: red;
+        }
+        .team > div:last-child > div {
+            flex: 1;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .team > div:last-child > div:first-child > div:first-child {
+            width: 100%;
+            flex: 2;
+            background-color: #036d05;
+            border: 1px solid black;
+        }
+        .team > div:last-child > div:first-child > div:last-child {
+            background-color: #383838;
+            width: 100%;
+            border: 1px solid black;
+            flex: 1;
+        }
+        .team > div:last-child > div:nth-child(2) > div:first-child,
+        .team > div:last-child > div:nth-child(4) > div:first-child{
+            flex: 1;
+            width: 100%;
+            background-color: white;
+        }
+        .team > div:last-child > div:nth-child(2) > div:last-child,
+        .team > div:last-child > div:nth-child(4) > div:last-child {
+            flex: 3;
+            width: 100%;
+            background-color: #fcbc22;
+            border: 1px solid black;
+        }
+        .team > div:last-child > div:nth-child(4) > div:last-child {
+            background-color: #964709;
+        }
+        .team > div:last-child > div:nth-child(3) > div:first-child {
+            flex: 3;
+            width: 100%;
+            background-color: #036d05;
+            border: 1px solid black;
+        }
+        .team > div:last-child > div:nth-child(3) > div:last-child {
+            flex: 1;
+            width: 100%;
+            background-color: white;
+        }
+        .news {
+            width: 100%;
+            height: 500px;
+            margin: 100px 0 200px 0;
+        }
+        .news > div:first-child {
+            width: 1100px;
+            height: 300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        .news > div:first-child > .product-font-class > div:first-child {
+            margin-left: -90px;
+        }
+        .news > div:first-child > .product-font-class > div:first-child .dot {
+            margin-left: -165px;
+        }
+        .news > div:first-child > div:last-child {
+            width: 50px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            text-align: center;
+            line-height: 15px;
+            font-size: 12px;
+            color: gray;
+        }
+        .news > div:last-child {
+            margin: 50px auto;
+            width: 1100px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .news > div:last-child > div {
+            flex: 1;
+            height: 100%;
+        }
+        .news > div:last-child > div:nth-child(2) {
+            background-color: #2d2d2d;
+        }
+        .news > div:last-child > div > div {
+            width: 90px;
+            height: 120px;
+            background-color: #fcbc22;
+            margin: -20px 0 0 40px;
+        }
+        .news > div:last-child > div:nth-child(1) > div,
+        .news > div:last-child > div:nth-child(3) > div {
+            height: 100px;
+            background-color: #2d2d2d;
+            margin: -10px 0 0 80px;
+        }
+        .bottom-more-button {
+            margin: 100px auto;
+            width: 120px;
+            height: 35px;
+            border-radius: 17px;
+            border: 1px solid gray;
+            color: gray;
+            text-align: center;
+            line-height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bottom-more-button img {
+            width: 20px;
+            height: 20px;
+        }
+        .close-footer {
+            background-color: #9b8651;
+            width: 100%;
+            height: 200px;
+            margin-top:100px;
+            display: flex;
+            align-items: center;
+        }
+        .close-footer > div {
+            width:1100px;
+            height:130px;
+            margin:0 auto;
+            position: relative;
+        }
+        .close-footer > div > div {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 150px;
+            background-color: #fcbc22;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="banner">
+        <div class="banner-content-container">
+            <div class="logo">LOGO</div>
+            <ul class="menu">
+                <li class="menu-item">
+                    首页
+                </li>
+                <li class="menu-item">
+                    关于
+                </li>
+                <li class="menu-item" id="product-button">
+                    产品
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">1</li>
+                        <li class="sub-menu-item">2</li>
+                        <li class="sub-menu-item">3</li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    案例
+                </li>
+                <li class="menu-item">
+                    团队
+                </li>
+                <li class="menu-item">
+                    新闻咨询
+                </li>
+                <li class="menu-item">
+                    客户留言
+                </li>
+                <li class="menu-item">
+                    联系我们
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle-bottom-block"></div>
+</div>
+<div class="product-area">
+    <div class="product-area-container">
+        <div class="product-navigation">
+            <div class="product-font-class">
+                <div>
+                    <div>PRODUCT</div>
+                    <div class="dot"></div>
+                </div>
+                <div class="line"></div>
+                <div>产品中心</div>
+            </div>
+            <ul class="product-navigation-menu">
+                <li>产品1</li>
+                <li>-</li>
+                <li>产品2</li>
+                <li>-</li>
+                <li>产品3</li>
+                <li>-</li>
+                <li>产品4</li>
+                <li>-</li>
+                <li>产品5</li>
+            </ul>
+        </div>
+        <div class="product-show-area">
+            <div class="left">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="middle">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="right">
+                <div></div>
+            </div>
+        </div>
+        <div class="more">
+            更多
+            <img src="media/arrow.svg" alt="arrow" />
+        </div>
+    </div>
+</div>
+<div class="color-bulk-container">
+    <div class="up-color-bulk"></div>
+    <div class="down-color-bulk"></div>
+</div>
+<div class="grid1">
+    <div class="row1">
+        <div class="case">
+            <div class="product-font-class">
+                <div>
+                    <div>CASE</div>
+                    <div class="dot"></div>
+                </div>
+                <div class="line"></div>
+                <div>经典案例</div>
+            </div>
+        </div>
+        <div></div>
+        <div>
+            <h2>案例名称</h2>
+            <div></div>
+            <p>案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍...</p>
+        </div>
+    </div>
+    <div class="cross-line"></div>
+    <div class="other-rows">
+        <div class="row2">
+            <div></div>
+            <div>
+                <h2>案例名称</h2>
+                <div></div>
+                <p>案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍...</p>
+            </div>
+            <div></div>
+        </div>
+        <div class="row3">
+            <div>
+                <h2>案例名称</h2>
+                <div></div>
+                <p>案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍...</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div>
+                <h2>案例名称</h2>
+                <div></div>
+                <p>案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍...</p>
+            </div>
+        </div>
+    </div>
+    <div class="more">
+        更多
+        <img src="media/arrow.svg" alt="arrow" />
+    </div>
+</div>
+<div class="team">
+    <div>
+        <div class="product-font-class">
+            <div>
+                <div>TEAM</div>
+                <div class="dot"></div>
+            </div>
+            <div class="line"></div>
+            <div>团队</div>
+        </div>
+        <div>more</div>
+    </div>
+    <div></div>
+    <div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<div class="news">
+    <div>
+        <div class="product-font-class">
+            <div>
+                <div>NEWS</div>
+                <div class="dot"></div>
+            </div>
+            <div class="line"></div>
+            <div>新闻资讯</div>
+        </div>
+        <div>more</div>
+    </div>
+    <div>
+        <div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<div class="bottom-more-button">
+    更多
+    <img src="media/arrow.svg" alt="arrow" />
+</div>
+<div style="background-color: #9b8651; width: 100%; height: 100px;"></div>
+<div class="close-footer">
+    <div>
+        <div></div>
+    </div>
+</div>
+<div style="width: 100%; height: 40px; background-color: #243329"></div>
+<script>
+    const productItem = document.querySelector('.sub-menu')
+    const productButton = document.querySelector('#product-button')
+    productButton.addEventListener('mouseover', (e) => {
+        productItem.style.display = 'block'
+    })
+    productButton.addEventListener('mouseout', (e) => {
+        productItem.style.display = 'none'
+    })
+    productItem.addEventListener('mouseout', (e) => {
+        productItem.style.display = 'none'
+    })
+</script>
+</body>
+</html>

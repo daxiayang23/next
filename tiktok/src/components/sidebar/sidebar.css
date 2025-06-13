@@ -1,0 +1,66 @@
+.sidebar {
+    width: 100%;
+    height: 100%;
+    padding: 14px 0 14px 20px;
+    position: relative;
+}
+.sidebar > li > ul > li {
+    width: 85%;
+    height: 40px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 8px 0 8px 16px;
+    margin-top: 2px;
+    cursor: pointer;
+    transition: color .3s ease, background-color .3s ease;
+    position: relative;
+}
+.sidebar > li > ul > li:hover {
+    background: #2d2f38;
+    color: #fff;
+}
+.sidebar > li > ul > li span {
+    font-size: 22px;
+    line-height: 1px;
+}
+.sidebar > li .split-line {
+    height: 1px;
+    width: 85%;
+    background: #1F212C;
+}
+.sidebar > li:nth-child(3),
+.sidebar > li:nth-child(5) {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.sidebar > div {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sidebar > div .font-classes {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    text-align: center;
+    transition: color .3s ease, background-color .3s ease, box-shadow .3s ease;
+    cursor: pointer;
+}
+.sidebar > div .font-classes:hover {
+    background: #2d2f38;
+    color: #fff;
+    box-shadow: 0 0 0 4px #2d2f38;
+}
+.sidebar > div .font-classes span {
+    font-size: 18px;
+}
+.sidebar > div .font-classes:first-child span {
+    font-size: 24px;
+}

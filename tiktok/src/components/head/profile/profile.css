@@ -1,0 +1,34 @@
+.profile {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 15px 0 0;
+}
+.profile ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile ul li > div {
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.profile ul li > div:hover {
+    color: #fff;
+}
+.profile ul li > div > div:last-child {
+    font-size: 12px;
+    transform: scale(0.9);
+}
+.profile ul li .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}

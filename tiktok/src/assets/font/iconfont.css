@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4947386 */
+  src: url('iconfont.woff2?t=1749728852939') format('woff2'),
+       url('iconfont.woff?t=1749728852939') format('woff'),
+       url('iconfont.ttf?t=1749728852939') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-plus:before {
+  content: "\e8fe";
+}
+
+.icon-star1:before {
+  content: "\e650";
+}
+
+.icon-message2:before {
+  content: "\e6fe";
+}
+
+.icon-help:before {
+  content: "\e696";
+}
+
+.icon-settings:before {
+  content: "\e61d";
+}
+
+.icon-Menu:before {
+  content: "\e611";
+}
+
+.icon-fullscreen:before {
+  content: "\e692";
+}
+
+.icon-sound:before {
+  content: "\e7da";
+}
+
+.icon-full-screen:before {
+  content: "\e659";
+}
+
+.icon-listen-later:before {
+  content: "\e60f";
+}
+
+.icon-mute:before {
+  content: "\e83d";
+}
+
+.icon-play:before {
+  content: "\e8c2";
+}
+
+.icon-pause:before {
+  content: "\e6fd";
+}
+
+.icon-emoji:before {
+  content: "\e623";
+}
+
+.icon-danmukaiqi:before {
+  content: "\e613";
+}
+
+.icon-danmuguanbi:before {
+  content: "\e614";
+}
+
+.icon-love:before {
+  content: "\e665";
+}
+
+.icon-star:before {
+  content: "\e645";
+}
+
+.icon-threedots:before {
+  content: "\e6ea";
+}
+
+.icon-Play:before {
+  content: "\eb78";
+}
+
+.icon-aixin-xian:before {
+  content: "\e64d";
+}
+
+.icon-message1:before {
+  content: "\e6df";
+}
+
+.icon-share:before {
+  content: "\e68f";
+}
+
+.icon-weibiaoti102:before {
+  content: "\e61e";
+}
+
+.icon-followed:before {
+  content: "\e682";
+}
+
+.icon-tv:before {
+  content: "\e622";
+}
+
+.icon-movie:before {
+  content: "\e6cc";
+}
+
+.icon-vlog:before {
+  content: "\e604";
+}
+
+.icon-Profile:before {
+  content: "\e616";
+}
+
+.icon-ai:before {
+  content: "\e67d";
+}
+
+.icon-star-05:before {
+  content: "\e6bf";
+}
+
+.icon-search:before {
+  content: "\e621";
+}
+
+.icon-good2:before {
+  content: "\e600";
+}
+
+.icon-cc-diamond:before {
+  content: "\e637";
+}
+
+.icon-download:before {
+  content: "\e6a5";
+}
+
+.icon-message:before {
+  content: "\e78a";
+}
+
+.icon-post:before {
+  content: "\e601";
+}
+
+.icon-magic-line:before {
+  content: "\e6d6";
+}
+
+.icon-notification:before {
+  content: "\e679";
+}
+
+.icon-douyin:before {
+  content: "\e602";
+}
+
+.icon-douyin1:before {
+  content: "\e674";
+}
+
