@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+        }
+        .head {
+            width: 100%;
+            height: 40px;
+            margin: 0 auto;
+            line-height: 40px;
+            background: #f5f5f7;
+        }
+        .head-right {
+            width: 1200px;
+            height: 100%;
+            text-align: right;
+        }
+        a {
+            text-decoration: none;
+            color: gray;
+            font-size: 12px;
+        }
+        ul, li {
+            list-style: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: red;
+        }
+        .banner {
+            width: 100%;
+            height: 150px;
+            margin: 10px 0 0 0;
+            background: linear-gradient(to bottom, #012d5a, #3782b0);
+        }
+        .banner-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .banner-content-left {
+            width: 50%;
+            font-size: 50px;
+            color: #012d5a;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+        }
+        .banner-content-right {
+            width: 30%;
+            display: flex;
+            opacity: 0;
+        }
+        .banner-content-right-search {
+            display: flex;
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: space-between;
+            outline: 1px solid gray;
+            background-color: white;
+        }
+        .banner-content-right-search > button {
+            width: 50px;
+            height: 100%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: #3782b0;
+        }
+        .banner-content-right-search > label > input {
+            outline: none;
+            border: none;
+            width: 100px;
+            margin: 0 0 0 15px;
+            height: 40px;
+            caret-color: #3782b0;
+        }
+        .nav {
+            width: 100%;
+            height: 50px;
+            background:linear-gradient(to bottom, #3782b0, #6aa0c6) ;
+            z-index: 999;
+        }
+        .nav-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-content-list {
+            display: flex;
+        }
+        .nav-content-item {
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0 15px;
+            line-height: 50px;
+            cursor: pointer;
+            color: white;
+        }
+        .nav-content-item:hover {
+            border-bottom: 2px solid #3782b0;
+        }
+        .hot {
+            width: 100%;
+            height: 405px;
+            z-index: 555;
+        }
+        .hot-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+        }
+        .hot-content-swiper {
+            width: 720px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .hot-content-news {
+            width: calc(100% - 720px);
+            box-sizing: border-box;
+            padding: 16px;
+            height: 100%;
+        }
+        .hot-content-news ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            width: 100%;
+        }
+        .hot-content-news ul li {
+            height: 30px;
+            width: 100%;
+            border-bottom: 2px solid #eee;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .hot-content-news ul li:last-child {
+            border-bottom: none;
+        }
+        .hot-content-news ul li:hover {
+            text-decoration: underline;
+        }
+        @keyframes img-swiper {
+            0% {
+                transform: translateX(0);
+            }
+            33% {
+                transform: translateX(-720px);
+            }
+            67% {
+                transform: translateX(-1440px);
+            }
+            100% {
+                transform: translateX(-2160px);
+            }
+        }
+        .hot-content-swiper-img-item {
+            height: 100%;
+            position: relative;
+        }
+        .hot-content-swiper-img-item > img {
+            width: 720px;
+            height: 405px;
+        }
+        .hot-content-swiper-img-group {
+            height: 100%;
+            width: calc(3*720px);
+            display: flex;
+            animation: img-swiper 10s ease infinite;
+        }
+        .hot-content-swiper-detail {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            line-height: 40px;
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+        .footer {
+            margin-top: 236px;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to bottom, #3782b0, #012d5a);
+        }
+        .footer-content {
+            margin: 0 auto;
+            width: 1200px;
+            height: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="head-right">
+        <a href="#">收藏本页</a>
+    </div>
+</div>
+<div class="banner">
+    <div class="banner-content">
+        <div class="banner-content-left">乡村振兴<br /> <span style="font-size: 24px">xiangcunzhenxing</span></div>
+        <div class="banner-content-right">
+            <span style="font-size: 14px; color: gray; line-height: 40px">2025年6月15日 星期日</span>&nbsp;
+            <div class="banner-content-right-search">
+                <label>
+                    <input type="text" />
+                </label>
+                <button>搜索</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <div class="nav-content">
+        <ul class="nav-content-list">
+            <li class="nav-content-item">
+                <a href="./policy.html" style="color:white;font-size: 17px;">要闻</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="./policy.html" style="color:white;font-size: 17px;">图片</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="./policy.html" style="color:white;font-size: 17px;">独家</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="./policy.html" style="color:white;font-size: 17px;">案例</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="./policy.html" style="color:white;font-size: 17px;">图解</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="./policy.html" style="color:white;font-size: 17px;">政策</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="hot">
+    <div class="hot-content">
+        <div class="hot-content-swiper">
+            <div class="hot-content-swiper-img-group">
+                <div class="hot-content-swiper-img-item">
+                    <img src="image/1.jpg" alt="1" />
+                    <div class="hot-content-swiper-detail">乌篷船匠师钱寿堂：留住水乡魅影</div>
+                </div>
+                <div class="hot-content-swiper-img-item">
+                    <img src="image/2.jpg" alt="2" />
+                    <div class="hot-content-swiper-detail">“环山趣驾”为乡村振兴注入新活力</div>
+                </div>
+                <div class="hot-content-swiper-img-item">
+                    <img src="image/3.jpg" alt="3" />
+                    <div class="hot-content-swiper-detail">广西钦州：又到辣椒收获季</div>
+                </div>
+                <div class="hot-content-swiper-img-item">
+                    <img src="image/1.jpg" alt="1" />
+                    <div class="hot-content-swiper-detail">乌篷船匠师钱寿堂：留住水乡魅影</div>
+                </div>
+            </div>
+        </div>
+        <div class="hot-content-news">
+            <ul>
+                <li>带着茶农期盼 奔着实处走访</li>
+                <li>小葡萄“酿”出甜美生活</li>
+                <li>贵州：传统村落绽放时代新彩</li>
+                <li>岷江村：机车“驶入”田园 声浪“唤醒”林盘</li>
+                <li>浙江建德市：礼遇青年入乡拓宽“共富路”</li>
+                <li>山间立水站 清泉入万家</li>
+                <li style="text-align: right; text-decoration: underline">更多</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="propaganda">
+    <div class="propaganda-content">
+        <div class="propaganda-content-left"></div>
+        <div class="propaganda-content-right"></div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-content">
+        主办单位：乡村振兴宣传网-商务传媒学院 <br/>
+        <span style="font-size:12px; color: grey">网站保留所有权，未经允许不得复制镜像</span>
+    </div>
+</div>
+</body>
+</html>
