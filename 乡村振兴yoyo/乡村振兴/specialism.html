@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>专题</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+        }
+        .head {
+            width: 100%;
+            height: 40px;
+            margin: 0 auto;
+            line-height: 40px;
+            background: #f5f5f7;
+        }
+        .head-right {
+            width: 1200px;
+            height: 100%;
+            text-align: right;
+        }
+        a {
+            text-decoration: none;
+            color: gray;
+            font-size: 12px;
+        }
+        ul, li {
+            list-style: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: #006400;
+        }
+        .banner {
+            width: 100%;
+            height: 150px;
+            margin: 10px 0 0 0;
+            background: linear-gradient(to bottom, #50C878, #98FB98);
+        }
+        .banner-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .banner-content-left {
+            /*width: 400px;*/
+            width: 50%;
+            font-size: 50px;
+            color: #6B8E23;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            /*margin: 0 auto;*/
+            /*text-align: center;*/
+            /*box-sizing: border-box;*/
+            /*padding-top: 50px;*/
+        }
+        .banner-content-right {
+            width: 30%;
+            display: flex;
+        }
+        .banner-content-right-search {
+            background: white;
+            overflow: hidden;
+            border-radius: 30px;
+        }
+        .banner-content-right-search > button {
+            width: 50px;
+            height: 100%;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: #6B8E23;
+        }
+        .banner-content-right-search > label > input {
+            outline: none;
+            border: none;
+            width: 100px;
+            margin: 0 0 0 15px;
+            height: 40px;
+            caret-color: #3782b0;
+        }
+        .nav {
+            width: 100%;
+            height: 50px;
+            background:linear-gradient(to bottom, #98FB98, #90EE90) ;
+            z-index: 999;
+        }
+        .nav-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: right;
+        }
+        .nav-content-list {
+            display: flex;
+        }
+        .nav-content-item {
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0 20px;
+            line-height: 50px;
+            cursor: pointer;
+            color: white;
+            border-radius: 25px;
+            transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+        }
+        .nav-content-item:hover {
+            background: #50C878;
+            transform: scale(1.05);
+        }
+        .footer {
+            margin-top: 126px;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to bottom, #90EE90, #6B8E23);
+        }
+        .footer-content {
+            margin: 0 auto;
+            width: 1200px;
+            height: 100%;
+            text-align: center;
+        }
+        .special {
+            width: 100%;
+            height: 500px;
+        }
+        .special-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .special-content-title {
+            margin-left: 18rem;
+            width:200px;
+            border-bottom: 2px solid #6B8E23;
+            font-size: 32px;
+            color: gray;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .special-content ul {
+            margin-left: 18rem;
+            height: 100%;
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .special-content ul li {
+            font-size: 18px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="head-right">
+        <a href="#">收藏本页</a>
+    </div>
+</div>
+<div class="banner">
+    <div class="banner-content">
+        <div class="banner-content-left">乡村振兴<br /> <span style="font-size: 24px">xiangcunzhenxing</span></div>
+        <div class="banner-content-right">
+            <span style="font-size: 14px; color: gray; line-height: 40px">2025年6月15日 星期日</span>&nbsp;
+            <div class="banner-content-right-search">
+                <label>
+                    <input type="text" />
+                </label>
+                <button>搜索</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <div class="nav-content">
+        <ul class="nav-content-list">
+            <li class="nav-content-item">
+                <a href="index.html" style="color:white;font-size: 17px;">首页</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">访谈</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">发布会</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">国际合作</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">专题</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">视频</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="special">
+    <div class="special-content">
+        <div class="special-content-title">特别策划</div>
+        <ul>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+            <li>
+                <div>习近平关于扶贫工作的重要论述</div>
+                <div>2020-05-15</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-content">
+        主办单位：乡村振兴宣传网-商务传媒学院 <br/>
+        <span style="font-size:12px; color: grey">网站保留所有权，未经允许不得复制镜像</span>
+    </div>
+</div>
+</body>
+</html>

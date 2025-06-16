@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>乡村振兴</title>
+    <!-- 引入css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 头部内容 -->
+    <div id="heard_title">
+        <div id="heard_top">
+            <img class="logo" src="./images/logo.png" alt="">
+            <input class="sousuo" type="text" placeholder="输入关键词搜索">
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div id="nav">
+        <ul>
+            <li>
+                <a href="./index.html">网站首页</a>
+            </li>
+            <li>
+                <a href="./chanye.html">产业振兴</a>
+            </li>
+            <li>
+                <a href="./rencai.html">人才振兴</a>
+            </li>
+            <li>
+                <a href="wenhua.html">文化振兴</a>
+            </li>
+            <li>
+                <a href="kjzn.html">科技助农</a>
+            </li>
+            <li>
+                <a href="./login.html">登录</a>
+            </li>
+            <li>
+                <a href="register.html">注册</a>
+            </li>
+        </ul>
+        <div style="clear: both;"></div>
+    </div>
+    <!-- 轮播图 -->
+    <div id="banner">
+        <img src="./images/banner.jpeg" alt="">
+    </div>
+    <!-- mini导航栏 -->
+    <div id="mini_nav">
+        当前位置: <a href="./index.html">网站首页</a> - <a href="register.html">注册</a>
+    </div>
+    <div id="center">
+        <div id="register_center">
+            <h2>欢迎注册</h2>
+            <div id="register">
+                <form>
+                    <p class="form-title">乡村振兴了解平台</p>
+                    <input type="text" placeholder="账号" class="form-input" required>
+                    <input type="password" placeholder="密码" class="form-input" required>
+
+                    <div class="form-section">
+                        <label for="gender" class="form-label">请选择性别:</label>
+                        <input type="radio" id="male" name="gender" value="male" class="form-radio">
+                        <label for="male" class="form-radio-label">男</label>
+                        <input type="radio" id="female" name="gender" value="female" class="form-radio">
+                        <label for="female" class="form-radio-label">女</label>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="interest" class="form-label">请选择您的兴趣:</label>
+                        <input type="checkbox" id="agriculture" name="interest" value="agriculture"
+                            class="form-checkbox">
+                        <label for="agriculture" class="form-checkbox-label">农业</label>
+                        <input type="checkbox" id="technology" name="interest" value="technology" class="form-checkbox">
+                        <label for="technology" class="form-checkbox-label">技术</label>
+                        <input type="checkbox" id="education" name="interest" value="education" class="form-checkbox">
+                        <label for="education" class="form-checkbox-label">教育</label>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="region" class="form-label">选择您的地区:</label>
+                        <select id="region" name="region" class="form-select">
+                            <option value="" disabled selected>请选择</option>
+                            <option value="north">北方</option>
+                            <option value="south">南方</option>
+                            <option value="east">东部</option>
+                            <option value="west">西部</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="form-button">注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <div class="footer_box">
+            乡村振兴在行动网站
+        </div>
+    </div>
+</body>
+
+</html>

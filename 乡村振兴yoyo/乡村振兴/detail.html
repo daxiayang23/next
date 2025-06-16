@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻详情</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+        }
+        .head {
+            width: 100%;
+            height: 40px;
+            margin: 0 auto;
+            line-height: 40px;
+            background: #f5f5f7;
+        }
+        .head-right {
+            width: 1200px;
+            height: 100%;
+            text-align: right;
+        }
+        a {
+            text-decoration: none;
+            color: gray;
+            font-size: 12px;
+        }
+        ul, li {
+            list-style: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: #006400;
+        }
+        .banner {
+            width: 100%;
+            height: 150px;
+            margin: 10px 0 0 0;
+            background: linear-gradient(to bottom, #50C878, #98FB98);
+        }
+        .banner-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .banner-content-left {
+            /*width: 400px;*/
+            width: 50%;
+            font-size: 50px;
+            color: #6B8E23;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            /*margin: 0 auto;*/
+            /*text-align: center;*/
+            /*box-sizing: border-box;*/
+            /*padding-top: 50px;*/
+        }
+        .banner-content-right {
+            width: 30%;
+            display: flex;
+        }
+        .banner-content-right-search {
+            background: white;
+            overflow: hidden;
+            border-radius: 30px;
+        }
+        .banner-content-right-search > button {
+            width: 50px;
+            height: 100%;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: #6B8E23;
+        }
+        .banner-content-right-search > label > input {
+            outline: none;
+            border: none;
+            width: 100px;
+            margin: 0 0 0 15px;
+            height: 40px;
+            caret-color: #3782b0;
+        }
+        .nav {
+            width: 100%;
+            height: 50px;
+            background:linear-gradient(to bottom, #98FB98, #90EE90) ;
+            z-index: 999;
+        }
+        .nav-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: right;
+        }
+        .nav-content-list {
+            display: flex;
+        }
+        .nav-content-item {
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0 20px;
+            line-height: 50px;
+            cursor: pointer;
+            color: white;
+            border-radius: 25px;
+            transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+        }
+        .nav-content-item:hover {
+            background: #50C878;
+            transform: scale(1.05);
+        }
+        .footer {
+            margin-top: 236px;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to bottom, #90EE90, #6B8E23);
+        }
+        .footer-content {
+            margin: 0 auto;
+            width: 1200px;
+            height: 100%;
+            text-align: center;
+        }
+        .article {
+            width: 100%;
+            height: 400px;
+        }
+        .article-content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .article-content h1 {
+            text-align: center;
+        }
+        .article-content p {
+            line-height: 40px;
+            font-size:16px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="head-right">
+        <a href="#">收藏本页</a>
+    </div>
+</div>
+<div class="banner">
+    <div class="banner-content">
+        <div class="banner-content-left">乡村振兴<br /> <span style="font-size: 24px">xiangcunzhenxing</span></div>
+        <div class="banner-content-right">
+            <span style="font-size: 14px; color: gray; line-height: 40px">2025年6月15日 星期日</span>&nbsp;
+            <div class="banner-content-right-search">
+                <label>
+                    <input type="text" />
+                </label>
+                <button>搜索</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <div class="nav-content">
+        <ul class="nav-content-list">
+            <li class="nav-content-item">
+                <a href="index.html" style="color:white;font-size: 17px;">首页</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">访谈</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">发布会</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">国际合作</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="/specialism.html" style="color:white;font-size: 17px;">专题</a>
+            </li>
+            <li class="nav-content-item">
+                <a href="#" style="color:white;font-size: 17px;">视频</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="article">
+    <div class="article-content">
+        <h1>浙江建德市：礼遇青年入乡拓宽“共富路”</h1>
+        <hr />
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“地球二叠纪打了个‘大喷嚏’，96%的生物都成了历史，李家化石就是那会儿的见证者……”在浙江省建德市李家镇的乡村化石馆，来自新疆的创业青年张鹏鹏正为游客揭开远古奥秘。被当地独特的化石资源吸引，他扎根李家镇开办旅游公司，接待全国化石迷，没想到兴趣成了事业，当真闯出一番天地，他深有感触道：“农村创业，大有可为。”  <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;张鹏鹏的感慨，道出了越来越多入乡青年的心声。他们正为建德乡村注入活力，开辟共同富裕新路径。近年来，建德市聚焦人才这一乡村振兴“源头活水”，将招引青年入乡置于城乡要素融合的关键一环。以李家镇为例，依托独特化石资源，精准引导青年投身农村电商、创意农业、乡村研学等新业态。一纸“乡村梦想家”招募令飞向全国，已成功引入3家运营团队，盘活资源，接待游客近4万人次。<br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;政策沃土培育青年成长。建德还创新推出乡村人才分类认定机制，返乡人才最高可享D类人才礼遇，畅通成长通道。除此之外，这些青年入乡后，还能享受一站式的创业服务，从土地流转、技术支持、营销指导，再到金融赋能、平台支撑等。由此一来，创业成本更低，风险也更可控。<br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“从前种地靠天吃饭，如今靠科技提效。”返乡青年廖建新承包了500余亩土地，运用育秧流水线、植保无人机等现代装备，实现山区农田全程机械化，并屡获省市农业技能大赛荣誉，因而获评杭州E类人才。他的农场不仅直接带动本村及周边20余位村民“家门口”就业，还感召周边4名大学毕业生流转农田投身水稻种植，重塑乡村产业。<br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“人才是第一资源，每一位入乡青年都是乡村振兴的‘种子’。”李家镇相关负责人表示，未来将依托化石与生态资源双优势，实施“青年+青创”双轮驱动，培育乡村产业“头雁”。同时强化政策扶持、技能提升、融资对接等全链条服务，让青年在乡村大显身手，实现“培育一人、带动一片、致富一方”，拓宽农民增收路，缩小城乡差距。<br />
+        </p>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-content">
+        主办单位：乡村振兴宣传网-商务传媒学院 <br/>
+        <span style="font-size:12px; color: grey">网站保留所有权，未经允许不得复制镜像</span>
+    </div>
+</div>
+</body>
+</html>

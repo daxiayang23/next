@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #1a1a1a;
+        }
+        html, body {
+            width: 100%;
+            position: relative;
+        }
+        ul, li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .top {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            align-items: center;
+            padding: 0 15px;
+            position: absolute;
+            z-index: 999;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .top-left {
+            display: flex;
+        }
+        .top-left > li {
+            box-sizing: border-box;
+            height: 100%;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+        .top-right {
+            display: flex;
+        }
+        .top-right > li {
+            box-sizing: border-box;
+            height: 100%;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+        .head {
+            width: 100%;
+            height: 300px;
+            background: url("./image/1.jpg") no-repeat;
+            background-size: cover;
+            border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+        }
+        .head-content {
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .head-content-title {
+            font-size: 60px;
+            font-weight: bold;
+            color: #6B8E23;
+        }
+        .head-content-search {
+            margin: 10px 0 0 0;
+            width: 600px;
+            height: 60px;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .head-content-search > label > input{
+            width: 450px;
+            height: 60px;
+            outline: none;
+            border: none;
+            margin: 0 0 0 20px;
+            font-size: 28px;
+        }
+        .head-content-search > label > input::placeholder{
+            color: #eee;
+        }
+        .head-content-search > button {
+            width: 80px;
+            outline: none;
+            border: none;
+            background: #6B8E23;
+            color: #fff;
+            height: 100%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .nav {
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to bottom, #006400, #6B8E23);
+        }
+        .nav-content {
+            width: 1000px;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+        .nav-content li {
+            box-sizing: border-box;
+            height: 100%;
+            padding: 0 10px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        .nav-content li:hover {
+            color: white;
+        }
+        .main {
+            width: 100%;
+        }
+        .main-content {
+            width: 1000px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .main-content-left {
+            width: 600px;
+            height: 100%;
+        }
+        .main-content-right {
+            width: 400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 150px;
+            margin: 20px 0;
+            outline: 2px solid #eee;
+            cursor: pointer;
+        }
+        .card img {
+            height: 100%;
+        }
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 10px 0 10px 20px;
+        }
+        .card-content > div:last-child {
+            font-size: 12px;
+            color: grey;
+        }
+        .list {
+            display: flex;
+            margin: 20px 0;
+            padding-left: 2rem;
+            box-sizing: border-box;
+            cursor: pointer;
+            align-items: center;
+        }
+        .list-rank {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background: #6B8E23;
+            color: #fff;
+            border-radius: 3px;
+            margin: 0 10px;
+        }
+        .list-title {
+            font-size: 16px;
+            width: 200px;
+            margin: 0 10px;
+        }
+        .list-title:hover {
+            color: darkgreen;
+        }
+        .list-tag {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background: palevioletred;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <ul class="top-left">
+        <li>关于政策</li>
+        <li>反馈</li>
+        <li>侵权投诉</li>
+    </ul>
+    <ul class="top-right">
+        <li>消息</li>
+        <li>发布新闻</li>
+        <li>登录</li>
+    </ul>
+</div>
+<div class="head">
+    <div class="head-content">
+        <div class="head-content-title">乡村振兴论坛</div>
+        <div class="head-content-search">
+            <label>
+                <input type="text" placeholder="请输入需要的内容" />
+            </label>
+            <button>搜索</button>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <ul class="nav-content">
+        <li>
+            <a href="./index.html">首页</a>
+        </li>
+        <li>推荐</li>
+        <li>城市</li>
+        <li>专题</li>
+        <li>政策</li>
+        <li>振兴进行时</li>
+        <li>共同富裕</li>
+        <li>农业先行</li>
+    </ul>
+</div>
+<div class="main">
+    <div class="main-content">
+        <div class="main-content-left"></div>
+        <div class="main-content-right"></div>
+    </div>
+</div>
+<script>
+    const data = [
+        {
+            id:1,
+            title: "带着茶农期盼 奔着实处走访（锲而不舍落实中央八项规定精神·一线见闻）",
+            url: "image/4.jpg",
+            source: "人民日报",
+            date: "2025年6月15日"
+        },
+        {
+            id:2,
+            title: "贵州：传统村落绽放时代新彩",
+            url: "image/5.jpg",
+            source: "人民日报",
+            date: "2025年6月15日"
+        },
+        {
+            id:3,
+            title: "浙江建德市：礼遇青年入乡拓宽“共富路",
+            url: "image/6.jpg",
+            source: "人民日报",
+            date: "2025年6月15日"
+        },
+        {
+            id:4,
+            title: "三农三增”何以底气十足？——山东潍坊昌邑市立足城乡融合推进乡村全面振兴",
+            url: "image/7.jpg",
+            source: "人民日报",
+            date: "2025年6月15日"
+        },
+        {
+            id:5,
+            title: "岷江村：机车“驶入”田园 声浪“唤醒”林盘",
+            url: "image/8.jpg",
+            source: "人民日报",
+            date: "2025年6月15日"
+        },
+    ]
+    const hot = [
+        {
+            id: 1,
+            rank: 1,
+            title: "带着茶农期盼 奔着实处走访（锲而不舍落实中央八项规定精神·一线见闻）",
+            tag: "热"
+        },
+        {
+            id: 2,
+            rank: 2,
+            title: "贵州：传统村落绽放时代新彩",
+            tag: ""
+        },
+        {
+            id: 3,
+            rank: 3,
+            title: "三农三增”何以底气十足？——山东潍坊昌邑市立足城乡融合推进乡村全面振兴",
+            tag: "热"
+        },
+        {
+            id: 4,
+            rank: 4,
+            title: "岷江村：机车“驶入”田园 声浪“唤醒”林盘",
+            tag: ""
+        },
+        {
+            id: 5,
+            rank: 5,
+            title: "浙江建德市：礼遇青年入乡拓宽“共富路",
+            tag: ""
+        }
+    ]
+    const container = document.querySelector('.main-content-left')
+    const hotContainer = document.querySelector('.main-content-right')
+    let content = ""
+    let hotContent = ""
+    document.addEventListener("DOMContentLoaded", () => {
+        data.map((item, index) => {
+                content  +=  `
+                <a href="./detail.html?id=${item.id}">
+                    <div class="card">
+                        <div class="card-content">
+                            <div>${item.title}</div>
+                            <div>${item.source}，${item.date}</div>
+                        </div>
+                        <img src="${item.url}" alt="${item.id}" />
+                    </div>
+                </a>
+            `
+        })
+        container.innerHTML = content
+        hot.map((item, index) => {
+            hotContent += `
+                <div class="list">
+                    <div class="list-rank">${item.rank}</div>
+                    <div class="list-title">${item.title}</div>
+                    <div class="${item.tag&&'list-tag'}">${item.tag}</div>
+                </div>
+            `
+        })
+        hotContainer.innerHTML = hotContent
+    })
+</script>
+</body>
+</html>
