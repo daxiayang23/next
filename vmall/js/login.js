@@ -26,10 +26,12 @@ formData.addEventListener("submit", (e) => {
     const username = formData.username.value
     const password = formData.password.value
     const user = users.find(user => user.username === username)
-    if(user && user.password === password) {
-        localStorage.setItem("username", username)
-        alert(`欢饮您，${username}`)
-        location.href = "../index.html"
+    if(user) {
+        if(user.password === password) {
+            localStorage.setItem("username", username)
+            alert(`欢饮您，${username}`)
+            location.href = "../index.html"
+        }
     } else {
         alert("用户名或者密码错误, 请重新输入")
     }

@@ -335,8 +335,8 @@
             `
         })
         hotContainer.innerHTML = hotContent
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
     const id = +urlParams.get('id')
     title.innerText = data.find(x => x.id === id).title
     content.innerText = data.find(x => x.id === id).content
